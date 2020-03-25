@@ -1,18 +1,11 @@
-/********************************
- * @file: home page
- * @desc: overview react multi page app
- * @author: leinov
- * @date:2018-12-06
- *******************************/
+
 
 import React, { Component } from "react";
-import Nav from "component/nav";
 import Footer from "component/footer"
 export default class App extends Component {
 	render() {
 		return (
 			<div>
-				<Nav />
 				<div className="main index column is-8">
 					<h1 className="title">React multi page app</h1>
 					<p>Webpack is widely used for single-page packaging.Scaffolding, led by create-react-app, is numerous.Single-page packaging usually refers to the business js, CSS packaging into the same HTML file, the whole project has only one HTML file entry.However, there are many businesses that require multiple entries to different pages, such as different h5 activities, or official websites that support seo, which require multiple different HTML,The webpack-react-multi-page architecture enables you to automate the packaging of newly created pages on multiple pages during project development and ensures that each page is hot replacement,and the build package has a clear hierarchy of files</p>

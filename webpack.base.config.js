@@ -1,18 +1,7 @@
-/* eslint-env node */
 
-/**************************
- * @file: webpack配置
- * @author: leinov
- * @date: 2018-10-08
- * @update: 2018-11-04 优化html文件
- * 1.修改htmlConfig.js
- * 2.在页面文件夹下添加pageinfo.json
- ***************************/
 
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");//css分离打包
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");//js压缩
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin"); //css压缩
 const createHtml =require("./config/create-html");// html配置
 const getEntry = require("./config/get-entry");
 const entry = getEntry("./src/pages");
@@ -21,10 +10,10 @@ const htmlArr = createHtml("./src/pages");
 //主配置
 module.exports = (env, argv) => ({
 	entry: entry,
-	output: {
-		path: path.join(__dirname, "build"),
-		filename: "[name].js"
-	},
+	// output: {
+	// 	path: path.join(__dirname, "build"),
+	// 	filename: "[name].js"
+	// },
 	module: {
 		rules: [
 			{
@@ -65,10 +54,6 @@ module.exports = (env, argv) => ({
 		 
 		],
 	},
-	// devServer: {
-	// 	port: 3100,
-	// 	open: true,
-	// },
 	resolve:{
 		alias:{
 			src:path.resolve(__dirname,"src/"),
@@ -83,24 +68,4 @@ module.exports = (env, argv) => ({
 			chunkFilename: "[id].css"
 		})
 	],
-	optimization: {
-		minimizer: [//压缩js
-			new UglifyJsPlugin({
-				cache: true,
-				parallel: true,
-				sourceMap: false
-			}),
-			new OptimizeCSSAssetsPlugin({})
-		],
-		splitChunks: { //压缩css
-			cacheGroups: {
-				styles: {
-					name: "styles",
-					test: /\.css$/,
-					chunks: "all",
-					enforce: true
-				}
-			}
-		}
-	}
 });

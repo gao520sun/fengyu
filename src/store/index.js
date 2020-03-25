@@ -1,9 +1,5 @@
 /* eslint-disable no-console */
-/********************
- * @file:redux main js
- * @author: leinov
- * @date: 2018-12-07
- ********************/
+
 
 import { createStore ,applyMiddleware, compose} from "redux";
 import todoList from "./reducer/index";
