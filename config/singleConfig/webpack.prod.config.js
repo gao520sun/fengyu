@@ -22,8 +22,8 @@ module.exports = merge(baseWebpackConfig, {
     // new CleanWebpackPlugin(['dist', 'build'], {
     //   root: path.resolve(__dirname, '../'),
     // }),
-    new CleanWebpackPlugin(),
-    new webpack.HashedModuleIdsPlugin(),
+    // new CleanWebpackPlugin(),
+    // new webpack.HashedModuleIdsPlugin(),
   ],
   // 代码分离相关
   optimization: {

@@ -6,14 +6,13 @@ const createHtml =require("./config/create-html");// html配置
 const getEntry = require("./config/get-entry");
 const entry = getEntry("./src/pages");
 const htmlArr = createHtml("./src/pages");
-
 //主配置
 module.exports = (env, argv) => ({
 	entry: entry,
-	// output: {
-	// 	path: path.join(__dirname, "build"),
-	// 	filename: "[name].js"
-	// },
+	output: {
+		path: path.join(__dirname, "build"),
+		filename: "./[name].js"
+	},
 	module: {
 		rules: [
 			{
@@ -68,4 +67,7 @@ module.exports = (env, argv) => ({
 			chunkFilename: "[id].css"
 		})
 	],
+	externals:{
+		'QMap':'qq.maps'
+	  },
 });

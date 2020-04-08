@@ -1,0 +1,4 @@
+{
+    "YAPI_CLOSE_REGISTER": false,
+    "YAPI_PLUGINS":[{"name":"add-user"},{"name":"gitlab","options":{}}]
+}

@@ -18,7 +18,7 @@ module.exports = (env, argv) => merge(baseWebpackConfig(env, argv),{
     },
     // 插件
     plugins: [
-      new CleanWebpackPlugin(),
+    //   new CleanWebpackPlugin(),
       new webpack.HashedModuleIdsPlugin(),
     ],
     optimization: {
