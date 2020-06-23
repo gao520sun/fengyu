@@ -14,7 +14,7 @@ module.exports = (env, argv) => merge(baseWebpackConfig(env, argv),{
     // 输出
     output: {
       path: path.resolve(__dirname, 'build'),
-      filename: "js/[name].[chunkhash].js",
+      filename: "js/[name].js",//[name].[chunkhash].js
     },
     // 插件
     plugins: [
