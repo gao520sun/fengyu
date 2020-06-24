@@ -2,7 +2,7 @@
  * @Author: gaozhonglei 
  * @Date: 2020-03-30 11:20:49 
  * @Last Modified by: gaozhonglei
- * @Last Modified time: 2020-06-23 19:18:05
+ * @Last Modified time: 2020-06-24 15:33:39
  */
 import React, { Component } from "react";
 import QMap from 'QMap'
@@ -261,7 +261,7 @@ export default class App extends Component {
             <div style = {{position:"relative", flex:1}}>
 				<div id="container" style={{ position: "absolute", top: 0, left: 0, width: '100%', height: '100% ' }}>
 			</div>
-			<div style={{position:"absolute",top:100,left:100,background:'red'}}>11shnihaoasdfdsfsd</div>
+			<div style={{position:"absolute",top:100,left:100,background:'red'}}>13331shnihaoasdfdsfsd</div>
 			</div>
         );
     }
